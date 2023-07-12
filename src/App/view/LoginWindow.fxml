@@ -8,9 +8,12 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.controller.LoginWindowController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            >
    <children>
-      <Button fx:id="errorButton" layoutX="274.0" layoutY="319.0" mnemonicParsing="false" onAction="#loginButtonAction" text="Zaloguj" />
+      <Button fx:id="errorButton" layoutX="274.0" layoutY="319.0" mnemonicParsing="false"
+              onAction="#loginButtonAction" text="Zaloguj" />
       <Label layoutX="27.0" layoutY="127.0" text="Email">
          <font>
             <Font size="14.0" />
