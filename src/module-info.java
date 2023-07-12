@@ -4,6 +4,7 @@ module EmailApp {
     requires javafx.web;
     requires javafx.controls;
 
-    opens Test;
-    opens Test.view;
+    opens App;
+    opens App.view;
+    opens App.controller;
 }

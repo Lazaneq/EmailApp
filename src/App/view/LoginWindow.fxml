@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.controller.LoginWindowController">
+   <children>
+      <Button fx:id="errorButton" layoutX="274.0" layoutY="319.0" mnemonicParsing="false" onAction="#loginButtonAction" text="Zaloguj" />
+      <Label layoutX="27.0" layoutY="127.0" text="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="190.0" text="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="103.0" layoutY="188.0" prefHeight="25.0" prefWidth="455.0" />
+      <TextField fx:id="emailAdressField" layoutX="103.0" layoutY="125.0" prefHeight="25.0" prefWidth="455.0" />
+   </children>
+</AnchorPane>
