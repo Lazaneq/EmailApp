@@ -21,12 +21,14 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="272.0" layoutY="49.0" prefHeight="30.0" prefWidth="57.0" text="Opcje" textAlignment="CENTER">
+      <Label layoutX="272.0" layoutY="49.0" prefHeight="30.0" prefWidth="57.0" styleClass="big" text="Opcje" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="cancelButton" layoutX="391.0" layoutY="351.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Anuluj" />
-      <Button fx:id="acceptButton" layoutX="483.0" layoutY="351.0" mnemonicParsing="false" text="Zatwierdź" />
+      <Button fx:id="cancelButton" layoutX="391.0" layoutY="351.0" mnemonicParsing="false"
+              onAction="#cancelBtnAction" prefHeight="25.0" prefWidth="68.0" text="Anuluj" />
+      <Button fx:id="acceptButton" layoutX="483.0" layoutY="351.0" mnemonicParsing="false"
+              onAction="#applyBtnAction" text="Zatwierdź" />
    </children>
 </AnchorPane>

@@ -11,18 +11,21 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class ViewFactory {
 
     private EmailManager emailManager;
+    private ArrayList<Stage> activeStages;
 
     public ViewFactory(EmailManager emailManager) {
         this.emailManager = emailManager;
+        activeStages = new ArrayList<>();
     }
 
     //Zarzadzanie opcjami
-    private ColorTheme colorTheme = ColorTheme.STANDARDOWY;
+    private ColorTheme colorTheme = ColorTheme.CIEMNY;
     private FontSize fontSize = FontSize.MID;
 
     public ColorTheme getColorTheme() {
@@ -72,9 +75,20 @@ public class ViewFactory {
         stage.setScene(scene);
         stage.setTitle("Okno");
         stage.show();
+        activeStages.add(stage);
     }
 
     public void closeStage(Stage stageToClose){
         stageToClose.close();
+        activeStages.remove(stageToClose);
+    }
+
+    public void updateStyles() {
+        for(Stage stage: activeStages){
+            Scene scene = stage.getScene();
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(getClass().getResource(getColorTheme().getCssPath()).toExternalForm());
+            scene.getStylesheets().add(getClass().getResource(getFontSize().getCssPath()).toExternalForm());
+        }
     }
 }

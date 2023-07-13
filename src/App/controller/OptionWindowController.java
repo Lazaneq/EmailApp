@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Slider;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.net.URL;
@@ -30,6 +31,20 @@ public class OptionWindowController extends BaseController implements Initializa
 
     @FXML
     private ChoiceBox<ColorTheme> themePick;
+
+    @FXML
+    void applyBtnAction() {
+        viewFactory.setColorTheme(themePick.getValue());
+        viewFactory.setFontSize(FontSize.values()[(int) (fontSizePick.getValue())]);
+        System.out.println((viewFactory.getColorTheme()));
+        System.out.println(viewFactory.getFontSize());
+        viewFactory.updateStyles();
+    }
+    @FXML
+    void cancelBtnAction() {
+        Stage stage = (Stage) fontSizePick.getScene().getWindow();
+        viewFactory.closeStage(stage);
+    }
 
     public OptionWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
         super(emailManager, viewFactory, fxmlName);

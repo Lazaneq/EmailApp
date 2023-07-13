@@ -17,6 +17,7 @@
             <items>
               <MenuItem mnemonicParsing="false" text="Zamknij" />
                   <MenuItem mnemonicParsing="false" text="Otwórz" />
+                  <MenuItem mnemonicParsing="false" onAction="#addAccountAction" text="Dodaj użytkownika" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -31,10 +32,8 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TreeView fx:id="emailsTreeView" layoutY="26.0" prefHeight="374.0" prefWidth="144.0"
-                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0" />
-      <TableView fx:id="emailsTableView" layoutX="143.0" layoutY="27.0" prefHeight="183.0"
-                 prefWidth="457.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+      <TreeView fx:id="emailsTreeView" layoutY="26.0" prefHeight="374.0" prefWidth="144.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0" />
+      <TableView fx:id="emailsTableView" layoutX="143.0" layoutY="27.0" prefHeight="183.0" prefWidth="457.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
         <columns>
           <TableColumn prefWidth="105.0" text="Nadawca" />
           <TableColumn prefWidth="90.0" text="Temat" />
