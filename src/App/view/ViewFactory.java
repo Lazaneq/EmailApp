@@ -9,23 +9,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class ViewFactory {
 
     private EmailManager emailManager;
     private ArrayList<Stage> activeStages;
 
+    private boolean mainViewInitialized = false;
     public ViewFactory(EmailManager emailManager) {
         this.emailManager = emailManager;
         activeStages = new ArrayList<>();
     }
 
+    public boolean isMainVieInitialized(){
+        return mainViewInitialized;
+    }
+
     //Zarzadzanie opcjami
-    private ColorTheme colorTheme = ColorTheme.CIEMNY;
+    private ColorTheme colorTheme = ColorTheme.STANDARDOWY;
     private FontSize fontSize = FontSize.MID;
 
     public ColorTheme getColorTheme() {
@@ -45,8 +48,8 @@ public class ViewFactory {
     public void showLoginWindow(){
         System.out.println("show login");
         BaseController controller = new LoginWindowController(emailManager, this, "LoginWindow.fxml");
-
         initializeStage(controller);
+        mainViewInitialized = true;
     }
     public void showMainWindow(){
         System.out.println("main window");
