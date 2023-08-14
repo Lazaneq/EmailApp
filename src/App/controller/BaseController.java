@@ -15,14 +15,6 @@ public abstract class BaseController {
         this.fxmlName = fxmlName;
     }
 
-    public EmailManager getEmailManager() {
-        return emailManager;
-    }
-
-    public ViewFactory getViewFactory() {
-        return viewFactory;
-    }
-
     public String getFxmlName() {
         return fxmlName;
     }

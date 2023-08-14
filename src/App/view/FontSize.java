@@ -1,18 +1,20 @@
 package App.view;
 
 public enum FontSize {
-    MALY("fontSmall"),
-    MID("fontMedium"),
-    DUZY("fontBig");
+    SMALL,
+    MEDIUM,
+    BIG;
 
-    private String css;
-
-    FontSize(String css) {
-        this.css = css;
+    public static String getCssPath(FontSize fontSize){
+        switch (fontSize) {
+            case MEDIUM:
+                return "css/fontMedium.css";
+            case BIG:
+                return "css/fontBig.css";
+            case SMALL:
+                return "css/fontSmall.css";
+            default:
+                return null;
+        }
     }
-
-    public String getCssPath() {
-        return "css/" + css + ".css";
-    }
-
 }

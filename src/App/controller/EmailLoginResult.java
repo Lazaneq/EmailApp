@@ -1,9 +1,8 @@
 package App.controller;
 
 public enum EmailLoginResult {
-    SUCCES,
+    SUCCESS,
     FAILED_BY_CREDENTIALS,
     FAILED_BY_NETWORK,
-    FAILED_UNEXPECTED;
-
+    FAILED_BY_UNEXPECTED_ERROR;
 }

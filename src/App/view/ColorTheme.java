@@ -1,18 +1,21 @@
 package App.view;
 
 public enum ColorTheme {
-    JASNY("themeLight"),
-    STANDARDOWY("themeDefault"),
-    CIEMNY("themeDark");
+    LIGHT,
+    DEFAULT,
+    DARK;
 
-    private String css;
-
-    ColorTheme(String css) {
-        this.css = css;
-    }
-
-    public String getCssPath() {
-        return "css/" + css + ".css";
+    public static String getCssPath(ColorTheme colorTheme){
+        switch (colorTheme) {
+            case LIGHT:
+                return "css/themeLight.css";
+            case DEFAULT:
+                return "css/themeDefault.css";
+            case DARK:
+                return "css/themeDark.css";
+            default:
+                return null;
+        }
     }
 
 }
